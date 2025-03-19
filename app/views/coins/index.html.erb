@@ -1,2 +1,6 @@
-<h1>Coins#index</h1>
-<p>Find me in app/views/coins/index.html.erb</p>
+<h1>Coins</h1>
+<ul>
+  <% @coins.each do |coin| %>
+    <li><%= link_to coin.name, coin_path(coin) %></li>
+  <% end %>
+</ul>

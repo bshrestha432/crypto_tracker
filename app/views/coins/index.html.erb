@@ -4,3 +4,13 @@
     <li><%= link_to coin.name, coin_path(coin) %></li>
   <% end %>
 </ul>
+
+<!-- Search Form -->
+<%= form_with url: coins_path, method: :get, class: "mb-4" do |form| %>
+  <div class="input-group">
+    <%= form.text_field :search, placeholder: "Search coins by name", class: "form-control" %>
+    <div class="input-group-append">
+      <%= form.submit "Search", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

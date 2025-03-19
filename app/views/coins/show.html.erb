@@ -1,2 +1,6 @@
-<h1>Coins#show</h1>
-<p>Find me in app/views/coins/show.html.erb</p>
+<h1><%= @coin.name %></h1>
+<p>Symbol: <%= @coin.symbol %></p>
+<p>Price: <%= @coin.price %></p>
+<p>Market Cap: <%= @coin.market_cap %></p>
+<p>24h Volume: <%= @coin.volume_24h %></p>
+<p>24h Change: <%= @coin.change_24h %></p>

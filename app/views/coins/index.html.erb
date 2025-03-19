@@ -6,6 +6,7 @@
 </ul>
 
 <!-- Search Form -->
+
 <%= form_with url: coins_path, method: :get, class: "mb-4" do |form| %>
   <div class="input-group">
     <%= form.text_field :search, placeholder: "Search coins by name", class: "form-control" %>
@@ -18,3 +19,11 @@
 <!-- Pagination -->
 
 <%= paginate @coins %>
+
+<!-- ERB conditional -->
+
+<% if @coin.price > 1000 %>
+  <p>This coin is expensive!</p>
+<% else %>
+  <p>This coin is affordable.</p>
+<% end %>
